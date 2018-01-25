@@ -1,0 +1,14 @@
+project:
+  name: localtest
+
+
+#DB Configuration:
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    name: unicast
+    url: jdbc:mysql://121.42.227.229:3306/unicast?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: honeyyao
+#server:
+#  port: 8081

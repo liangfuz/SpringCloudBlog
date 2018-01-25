@@ -1,0 +1,36 @@
+spring:
+  profiles:
+#    active: local
+#    active: product
+#    active: test
+    active: localtest
+
+#JPA Configuration:
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  http:
+    multipart:
+      max-file-size: 50Mb
+      max-request-size: 100Mb
+      enabled: true
+
+#  activemq:
+#    broker-url: tcp://localhost:61616
+#    in-memory: true
+#    pool:
+#      enabled: false
+#    user: admin
+#    password: admin
+#  jms:
+#    template:
+#      delivery-mode: persistent
+#      qos-enabled: true
+#    #pub-sub-domain: false
+#    listener:
+#      acknowledge-mode: auto
+server:
+  contextPath: /unicast/
+  display-name: unicast

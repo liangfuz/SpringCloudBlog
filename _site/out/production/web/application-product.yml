@@ -1,0 +1,11 @@
+project:
+  name: product
+
+#DB Configuration:
+spring:
+  datasource:
+    name: unicast
+    url: jdbc:mysql://127.0.0.1:3306/unicast?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password: honeyyao
+    driver-class-name: com.mysql.jdbc.Driver

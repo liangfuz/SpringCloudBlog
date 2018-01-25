@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开源小分队的博客</title>
+    <description>开源小分队的博客
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 25 Jan 2018 15:49:07 +0800</pubDate>
+    <lastBuildDate>Thu, 25 Jan 2018 15:49:07 +0800</lastBuildDate>
+    <generator>Jekyll v3.6.2</generator>
+    
+      <item>
+        <title>SpringCloud微服务搭建</title>
+        <description>&lt;p&gt;Spring Cloud是一系列框架的有序集合。它利用Spring Boot的开发便利性巧妙地简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器、数据监控等，都可以用Spring Boot的开发风格做到一键启动和部署。&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Jan 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2018/01/25/SpringCloud-build.html</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/01/25/SpringCloud-build.html</guid>
+        
+        <category>Spring</category>
+        
+        <category>Cloud</category>
+        
+        
+        <category>SpringCloud</category>
+        
+      </item>
+    
+  </channel>
+</rss>
