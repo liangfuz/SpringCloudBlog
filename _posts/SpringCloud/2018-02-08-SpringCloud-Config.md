@@ -17,6 +17,7 @@ Spring Cloud Config包含config-server和config-client
 
 * config-client: 客户端，获取配置。
 
+* rabbitMq: 消息推送，要使用spring cloud bus需启动rabbitmq（安装方法请自行百度）。
 ### 3.Pom文件依赖添加
 #### 3.1 config-server Pom引入config-server和bus消息总线模块
 
