@@ -5,7 +5,7 @@ layout: post
 
 ## Our Blog
 
-这个博客是用来记录我们的团队探索SpringCloud
+创建这个博客的目的是为了记录我们团队探索Spring Cloud的成果，我们的项目[Spring Cloud](https://github.com/liangfuz/Spring-Cloud)托管在git
 
 ## 博客平台
 

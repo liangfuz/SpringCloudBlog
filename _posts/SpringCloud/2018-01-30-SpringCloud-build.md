@@ -26,6 +26,7 @@ keywords: Spring,Cloud，Feign
 3. Java文件加注解。
 
 > 注意：本示例的spring-cloud版本为Camden.SR5
+
 ```
 <dependencyManagement>
     <dependencies>
@@ -52,6 +53,7 @@ keywords: Spring,Cloud，Feign
 </dependency>
 ```
 2. 配置application.yml文件
+
 ```
 spring:
   application:
@@ -72,6 +74,7 @@ eureka:
 通过eureka.client.registerWithEureka：false和fetchRegistry：false来表明自己是一个eureka server.
 
 3. 文件RegistryApplication中加入注解
+
 ```
 @SpringBootApplication
 @EnableEurekaServer
@@ -104,6 +107,7 @@ public class RegistryApplication {
 </dependencies>
 ```
 2. 配置application.yml文件
+
 ```
 spring:
   application:
@@ -122,6 +126,7 @@ eureka:
 prefer-ip-address表明添加注册中心中的ip代替主机名
 
 3. 新建ProductServerApplication.java文件，在ProductServerApplication中加入注解
+
 ```
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -133,6 +138,7 @@ public class ProductServerApplication {
 
 ```
 4. 新建controller包，在此包下新建ProductController.java文件，商品服务提供相关的Api,访问地址：/product/get?name=jiangrj，代码如下：
+
 ```
 @RestController
 @RequestMapping("/product")
@@ -147,6 +153,7 @@ public class ProductController {
 
 ### 4. 创建order-service模块
 1. POM文件中引入order-service的相关依赖
+
 ```
 <dependencies>
     <dependency>
@@ -171,6 +178,7 @@ public class ProductController {
 </dependencies>
 ```
 2. 配置application.yml文件
+
 ```
 spring:
   application:
@@ -188,6 +196,7 @@ eureka:
 ```
 
 3. 新建OrderServerApplication.java文件，在OrderServerApplication中加入注解
+
 ```
 @SpringBootApplication
 @EnableDiscoveryClient
@@ -201,6 +210,7 @@ public class OrderServerApplication {
 
 
 4. 新建client包，新建ProductClient.java文件，商品服务调用客户端，代码如下：
+
 ```
 @FeignClient(name= "product-service") //配置文件中注册到注册中心的名字
 public interface ProductClient {
@@ -209,6 +219,7 @@ public interface ProductClient {
 }
 ```
 5. 新建controller包，新建OrderController.java文件，订单服务提供相关的Api，通过ProductClient来调用商品服务，访问地址：/order/create/jiangrj，代码如下：
+
 ```
 @RestController
 @RequestMapping("/order")
@@ -231,9 +242,11 @@ public class OrderController {
 
 两个服务都正常启动，
 现在直接在浏览器中输入http://localhost:8861/product/get?name=jiangrj，调用product-service提供的Restful接口,浏览器显示:
->hello jiangrj，this is product info
+
+`hello jiangrj，this is product info`
 
 接着在浏览器中输入http://localhost:8871/order/create/jiangrj,调用order-service服务，从而调用商品服务
+
 > 浏览器显示：hello jiangrj，this is product info
 
 > 控制台打印：create order!
