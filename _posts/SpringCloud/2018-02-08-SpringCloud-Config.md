@@ -19,12 +19,16 @@ Spring Cloud Config包含config-server和config-client
 
 * rabbitMq: 消息推送，要使用spring cloud bus需启动rabbitmq（安装方法请自行百度）。
 ### 3.Pom文件依赖添加
-#### 3.1 config-server Pom引入config-server和bus消息总线模块
+#### 3.1 config-server Pom引入config-server，config-monitor和bus消息总线模块
 
 ```
 <dependency>
     <groupId>org.springframework.cloud</groupId>
     <artifactId>spring-cloud-config-server</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-config-monitor</artifactId>
 </dependency>
 <dependency>
     <groupId>org.springframework.cloud</groupId>
